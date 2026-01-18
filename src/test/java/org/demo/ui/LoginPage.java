@@ -1,5 +1,6 @@
 package org.demo.ui;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -11,16 +12,19 @@ public class LoginPage {
         this.driver = driver;
     }
 
+    @Step("Open Homepage")
     public void open() {
         driver.get("https://www.saucedemo.com/");
     }
 
+    @Step("Login with username: {username} and password: {password}")
     public void login(String user, String pass) {
         driver.findElement(By.id("user-name")).sendKeys(user);
         driver.findElement(By.id("password")).sendKeys(pass);
         driver.findElement(By.id("login-button")).click();
     }
 
+    @Step("Check error message")
     public boolean isErrorVisible() {
         return !driver.findElements(By.cssSelector("[data-test='error']")).isEmpty();
     }
