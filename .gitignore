@@ -37,3 +37,12 @@ build/
 
 ### Mac OS ###
 .DS_Store
+# Allure commandline
+.allure/
+
+# Generated files
+generated/
+src/test/java/org/demo/generated/
+
+### IntelliJ IDEA ###
+.idea/
