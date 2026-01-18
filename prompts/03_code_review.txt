@@ -9,12 +9,15 @@ Analyze the code and provide:
 - Stability problems
 - Maintainability issues
 - Suggestions for improvement
+- Best practices violations
+- Potential enhancements
 
 Rules:
 - Do not rewrite the code
 - Do not add markdown
 - Be concise but professional
 - Focus on test automation quality
+- Provide actionable feedback
 
 CODE:
 {{CODE}}

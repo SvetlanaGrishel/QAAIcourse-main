@@ -13,7 +13,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <testng.version>7.11.0</testng.version>
-        <selenium.version>4.32.0</selenium.version>
+        <selenium.version>4.39.0</selenium.version>
         <allure.version>2.27.0</allure.version>
         <checkstyle.version>3.4.0</checkstyle.version>
         <spotless.version>2.43.0</spotless.version>

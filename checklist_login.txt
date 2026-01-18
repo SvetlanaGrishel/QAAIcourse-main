@@ -1,13 +1,31 @@
 Site: https://www.saucedemo.com/
-Scope: Login only
+Test Scenarios for Login Functionality and Related Features:
+
+Scope:
+- Login
+- Item Details Page
+- Cart page
+- Checkout page
+- Add product to Cart
+- Remove product from Cart
+- Sorting of items
 
 Checklist:
 1) Valid login -> Products page is opened
-2) Invalid password -> error message is shown
-3) Invalid username -> error message is shown
-4) Empty fields -> validation error
-5) Locked user -> locked user error is shown
+2) Fail login with invalid password -> Error message is shown
+3) Fail login with invalid username -> Error message is shown
+4) Fail login with empty fields -> Validation error is shown
+5) Fail login with locked user -> Locked user error is shown
+6) Valid login -> Products page is opened -> Select any item -> Open Item details page -> Item details are displayed correctly
+7) Valid login -> Products page is opened -> Add product to Cart -> Product is added to Cart
+8) Valid login -> Products page is opened -> Remove product from Cart -> Product is removed from Cart
+9) Valid login -> Products page is opened -> Add product to Cart -> Go to Cart page -> Checkout -> Checkout is completed successfully
+10) Valid login -> Products page is opened -> Sort items by price (low to high) -> Items are sorted correctly
+11) Valid login -> Products page is opened -> Sort items by price (high to low) -> Items are sorted correctly
+12) Valid login -> Products page is opened -> Sort items by name (A to Z) -> Items are sorted correctly
+13) Valid login -> Products page is opened -> Sort items by name (Z to A) -> Items are sorted correctly
 
+Information for tests:
 userlogin: test@mail.com
 password: 7379482hhhkjh
 phone: +375292273388
