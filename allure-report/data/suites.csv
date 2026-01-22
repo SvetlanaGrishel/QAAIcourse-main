@@ -1,0 +1,6 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Sun Jan 18 16:18:06 MSK 2026","Sun Jan 18 16:18:06 MSK 2026","542","Surefire suite","Surefire test","org.demo.generated.GeneratedTest","org.demo.generated.GeneratedTest","login_04_Empty_fields","login_04_Empty_fields",""
+"passed","Sun Jan 18 16:18:02 MSK 2026","Sun Jan 18 16:18:03 MSK 2026","720","Surefire suite","Surefire test","org.demo.generated.GeneratedTest","org.demo.generated.GeneratedTest","login_01_Valid_login","login_01_Valid_login",""
+"passed","Sun Jan 18 16:18:05 MSK 2026","Sun Jan 18 16:18:05 MSK 2026","622","Surefire suite","Surefire test","org.demo.generated.GeneratedTest","org.demo.generated.GeneratedTest","login_03_Invalid_username","login_03_Invalid_username",""
+"passed","Sun Jan 18 16:18:03 MSK 2026","Sun Jan 18 16:18:04 MSK 2026","630","Surefire suite","Surefire test","org.demo.generated.GeneratedTest","org.demo.generated.GeneratedTest","login_02_Invalid_password","login_02_Invalid_password",""
+"passed","Sun Jan 18 16:18:07 MSK 2026","Sun Jan 18 16:18:08 MSK 2026","648","Surefire suite","Surefire test","org.demo.generated.GeneratedTest","org.demo.generated.GeneratedTest","login_05_Locked_user","login_05_Locked_user",""

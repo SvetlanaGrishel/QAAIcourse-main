@@ -1,0 +1,92 @@
+{
+  "uid" : "dc5f78d6aaa1674b",
+  "name" : "login_01_Valid_login",
+  "fullName" : "org.demo.generated.GeneratedLoginTest.login_01_Valid_login",
+  "historyId" : "57d04079f7d71c0219a7cb957c50823a",
+  "time" : {
+    "start" : 1768737555564,
+    "stop" : 1768737556313,
+    "duration" : 749
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setUp",
+    "time" : {
+      "start" : 1768737554546,
+      "stop" : 1768737555518,
+      "duration" : 972
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "tearDown",
+    "time" : {
+      "start" : 1768737556329,
+      "stop" : 1768737556420,
+      "duration" : 91
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "org.demo.generated.GeneratedLoginTest"
+  }, {
+    "name" : "testClass",
+    "value" : "org.demo.generated.GeneratedLoginTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "login_01_Valid_login"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Surefire suite"
+  }, {
+    "name" : "suite",
+    "value" : "Surefire test"
+  }, {
+    "name" : "subSuite",
+    "value" : "org.demo.generated.GeneratedLoginTest"
+  }, {
+    "name" : "host",
+    "value" : "NoutbukaGrishel.lan"
+  }, {
+    "name" : "thread",
+    "value" : "28045@NoutbukaGrishel.lan.main(3)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "dc5f78d6aaa1674b.json",
+  "parameterValues" : [ ]
+}

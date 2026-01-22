@@ -1,0 +1,102 @@
+{
+  "uid" : "e1e9ebe16ea1855d",
+  "name" : "login_03_Invalid_username",
+  "fullName" : "org.demo.generated.GeneratedLoginTest.login_03_Invalid_username",
+  "historyId" : "3a56995181e694d4711e1b6fa323f15b",
+  "time" : {
+    "start" : 1768742285001,
+    "stop" : 1768742285623,
+    "duration" : 622
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setUp",
+    "time" : {
+      "start" : 1768742284471,
+      "stop" : 1768742285000,
+      "duration" : 529
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "tearDown",
+    "time" : {
+      "start" : 1768742285624,
+      "stop" : 1768742285704,
+      "duration" : 80
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "org.demo.generated.GeneratedLoginTest"
+  }, {
+    "name" : "testClass",
+    "value" : "org.demo.generated.GeneratedLoginTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "login_03_Invalid_username"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Surefire suite"
+  }, {
+    "name" : "suite",
+    "value" : "Surefire test"
+  }, {
+    "name" : "subSuite",
+    "value" : "org.demo.generated.GeneratedLoginTest"
+  }, {
+    "name" : "host",
+    "value" : "NoutbukaGrishel.lan"
+  }, {
+    "name" : "thread",
+    "value" : "28652@NoutbukaGrishel.lan.main(3)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "9d8920f32da5be67",
+      "status" : "passed",
+      "time" : {
+        "start" : 1768737558182,
+        "stop" : 1768737558834,
+        "duration" : 652
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e1e9ebe16ea1855d.json",
+  "parameterValues" : [ ]
+}

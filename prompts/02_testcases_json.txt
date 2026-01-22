@@ -14,7 +14,7 @@ CRITICAL
 - Each test case must have unique "id", "title", "type" (positive/negative), "steps" (array of strings), and "expected" (string)
 - Ensure proper JSON syntax
 
-JSON FORMAT:
+EXAMPLE FORMAT:
 {
   "testcases": [
     {

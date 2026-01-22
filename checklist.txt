@@ -19,11 +19,6 @@ Checklist:
 6) Valid login -> Products page is opened -> Select any item -> Open Item details page -> Item details are displayed correctly
 7) Valid login -> Products page is opened -> Add product to Cart -> Product is added to Cart
 8) Valid login -> Products page is opened -> Remove product from Cart -> Product is removed from Cart
-9) Valid login -> Products page is opened -> Add product to Cart -> Go to Cart page -> Checkout -> Checkout is completed successfully
-10) Valid login -> Products page is opened -> Sort items by price (low to high) -> Items are sorted correctly
-11) Valid login -> Products page is opened -> Sort items by price (high to low) -> Items are sorted correctly
-12) Valid login -> Products page is opened -> Sort items by name (A to Z) -> Items are sorted correctly
-13) Valid login -> Products page is opened -> Sort items by name (Z to A) -> Items are sorted correctly
 
 Information for tests:
 userlogin: test@mail.com

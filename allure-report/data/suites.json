@@ -1,0 +1,82 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "Surefire suite",
+    "children" : [ {
+      "name" : "Surefire test",
+      "children" : [ {
+        "name" : "org.demo.generated.GeneratedLoginTest",
+        "children" : [ {
+          "name" : "login_01_Valid_login",
+          "uid" : "87d375cafc890915",
+          "parentUid" : "8f6d96b29845d7d94eaddf6085926b53",
+          "status" : "passed",
+          "time" : {
+            "start" : 1768742282417,
+            "stop" : 1768742283137,
+            "duration" : 720
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "login_02_Invalid_password",
+          "uid" : "a61b97d61762986e",
+          "parentUid" : "8f6d96b29845d7d94eaddf6085926b53",
+          "status" : "passed",
+          "time" : {
+            "start" : 1768742283761,
+            "stop" : 1768742284391,
+            "duration" : 630
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "login_03_Invalid_username",
+          "uid" : "e1e9ebe16ea1855d",
+          "parentUid" : "8f6d96b29845d7d94eaddf6085926b53",
+          "status" : "passed",
+          "time" : {
+            "start" : 1768742285001,
+            "stop" : 1768742285623,
+            "duration" : 622
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "login_04_Empty_fields",
+          "uid" : "58263e747121189a",
+          "parentUid" : "8f6d96b29845d7d94eaddf6085926b53",
+          "status" : "passed",
+          "time" : {
+            "start" : 1768742286252,
+            "stop" : 1768742286794,
+            "duration" : 542
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "login_05_Locked_user",
+          "uid" : "ecfe57ff3a22d7a1",
+          "parentUid" : "8f6d96b29845d7d94eaddf6085926b53",
+          "status" : "passed",
+          "time" : {
+            "start" : 1768742287424,
+            "stop" : 1768742288072,
+            "duration" : 648
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "8f6d96b29845d7d94eaddf6085926b53"
+      } ],
+      "uid" : "1fcb2e6ec8e5b5e8a1f2a70b87c80b24"
+    } ],
+    "uid" : "940a09faf31371a51747026c9d178f0a"
+  } ]
+}

@@ -1,5 +1,8 @@
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
 public class PipelineMain {
 
     public static void main(String[] args) {
@@ -9,7 +12,7 @@ public class PipelineMain {
         // STAGE 1. BUILD PROMPT FROM CHECKLIST
         String prompt = PromptEngine.buildPrompt(
                 "prompts/01_scenarios_from_checklist.txt",
-                "checklist_login.txt"
+                "checklist.txt"
         );
         FilesUtil.write("generated/final_prompt.txt", prompt);
 
@@ -54,6 +57,11 @@ public class PipelineMain {
         TestGenerator.generate();
         System.out.println("Autotests generated.");
 
+        // STAGE 5.5. LINTING / CODE STYLE CHECK
+        runLinter();
+
+        runTests();
+
         // STAGE 6. AI CODE REVIEW
         String generatedTest = FilesUtil.read(
                 "src/test/java/org/demo/generated/GeneratedLoginTest.java"
@@ -73,7 +81,7 @@ public class PipelineMain {
         System.out.println("AI code review saved: generated/code_review.txt");
 
         // STAGE. AI BUG REPORT (DESIGN-TIME)
-        String checklist = FilesUtil.read("checklist_login.txt");
+        String checklist = FilesUtil.read("checklist.txt");
         String testcases = FilesUtil.read("generated/testcases.json");
         String codeReview = FilesUtil.read("generated/code_review.txt");
 
@@ -96,6 +104,54 @@ public class PipelineMain {
         System.out.println("Bug report saved: generated/bug_report.json");
 
         System.out.println("=== AI QA PIPELINE FINISHED ===");
+    }
+
+    private static void runLinter() {
+        System.out.println("=== RUNNING CODE STYLE CHECK ===");
+        try {
+            ProcessBuilder processBuilder = new ProcessBuilder("mvn", "validate");
+            processBuilder.redirectErrorStream(true);
+            Process process = processBuilder.start();
+
+            BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+            String line;
+            while ((line = reader.readLine()) != null) {
+                System.out.println(line);
+            }
+
+            int exitCode = process.waitFor();
+            System.out.println("Exited with error code : " + exitCode);
+
+            if (exitCode != 0) {
+                throw new RuntimeException("Code style check failed. See output for details.");
+            }
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to run linter", e);
+        }
+    }
+
+    private static void runTests() {
+        System.out.println("=== RUNNING AUTOTESTS ===");
+        try {
+            ProcessBuilder processBuilder = new ProcessBuilder("mvn", "test");
+            processBuilder.redirectErrorStream(true);
+            Process process = processBuilder.start();
+
+            BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+            String line;
+            while ((line = reader.readLine()) != null) {
+                System.out.println(line);
+            }
+
+            int exitCode = process.waitFor();
+            System.out.println("Exited with error code : " + exitCode);
+
+            if (exitCode != 0) {
+                throw new RuntimeException("Autotests failed. See output for details.");
+            }
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to run tests", e);
+        }
     }
 
     private static String extractAssistantContent(String rawJson) {

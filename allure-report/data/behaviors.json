@@ -1,0 +1,70 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "login_01_Valid_login",
+    "uid" : "87d375cafc890915",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1768742282417,
+      "stop" : 1768742283137,
+      "duration" : 720
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "login_02_Invalid_password",
+    "uid" : "a61b97d61762986e",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1768742283761,
+      "stop" : 1768742284391,
+      "duration" : 630
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "login_03_Invalid_username",
+    "uid" : "e1e9ebe16ea1855d",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1768742285001,
+      "stop" : 1768742285623,
+      "duration" : 622
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "login_04_Empty_fields",
+    "uid" : "58263e747121189a",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1768742286252,
+      "stop" : 1768742286794,
+      "duration" : 542
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "login_05_Locked_user",
+    "uid" : "ecfe57ff3a22d7a1",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1768742287424,
+      "stop" : 1768742288072,
+      "duration" : 648
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  } ]
+}

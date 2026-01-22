@@ -1,0 +1,147 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "NoutbukaGrishel.lan",
+    "children" : [ {
+      "name" : "28045@NoutbukaGrishel.lan.main(3)",
+      "children" : [ {
+        "name" : "login_01_Valid_login",
+        "uid" : "dc5f78d6aaa1674b",
+        "parentUid" : "60d4324d5f7e368da8ce89ad760cf56c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1768737555564,
+          "stop" : 1768737556313,
+          "duration" : 749
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "login_05_Locked_user",
+        "uid" : "9f8b64c3e03b4be1",
+        "parentUid" : "60d4324d5f7e368da8ce89ad760cf56c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1768737560619,
+          "stop" : 1768737561256,
+          "duration" : 637
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "login_04_Empty_fields",
+        "uid" : "7fdef005f0fe9d60",
+        "parentUid" : "60d4324d5f7e368da8ce89ad760cf56c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1768737559452,
+          "stop" : 1768737560008,
+          "duration" : 556
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "login_02_Invalid_password",
+        "uid" : "29251316ebf5b7d",
+        "parentUid" : "60d4324d5f7e368da8ce89ad760cf56c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1768737556956,
+          "stop" : 1768737557566,
+          "duration" : 610
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "login_03_Invalid_username",
+        "uid" : "9d8920f32da5be67",
+        "parentUid" : "60d4324d5f7e368da8ce89ad760cf56c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1768737558182,
+          "stop" : 1768737558834,
+          "duration" : 652
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "60d4324d5f7e368da8ce89ad760cf56c"
+    }, {
+      "name" : "28652@NoutbukaGrishel.lan.main(3)",
+      "children" : [ {
+        "name" : "login_01_Valid_login",
+        "uid" : "87d375cafc890915",
+        "parentUid" : "c2780f4b7942b7e0aee29e7c24d691e4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1768742282417,
+          "stop" : 1768742283137,
+          "duration" : 720
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "login_05_Locked_user",
+        "uid" : "ecfe57ff3a22d7a1",
+        "parentUid" : "c2780f4b7942b7e0aee29e7c24d691e4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1768742287424,
+          "stop" : 1768742288072,
+          "duration" : 648
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "login_02_Invalid_password",
+        "uid" : "a61b97d61762986e",
+        "parentUid" : "c2780f4b7942b7e0aee29e7c24d691e4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1768742283761,
+          "stop" : 1768742284391,
+          "duration" : 630
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "login_03_Invalid_username",
+        "uid" : "e1e9ebe16ea1855d",
+        "parentUid" : "c2780f4b7942b7e0aee29e7c24d691e4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1768742285001,
+          "stop" : 1768742285623,
+          "duration" : 622
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "login_04_Empty_fields",
+        "uid" : "58263e747121189a",
+        "parentUid" : "c2780f4b7942b7e0aee29e7c24d691e4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1768742286252,
+          "stop" : 1768742286794,
+          "duration" : 542
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "c2780f4b7942b7e0aee29e7c24d691e4"
+    } ],
+    "uid" : "ace331aed20b19c4144024cba5ff1bb9"
+  } ]
+}

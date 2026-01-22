@@ -1,6 +1,9 @@
 import model.TestCase;
 import model.TestSuite;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class TestGenerator {
 
     public static void generate() {
@@ -13,6 +16,9 @@ public class TestGenerator {
                 package org.demo.generated;
                 import org.demo.ui.BaseUiTest;
                 import org.demo.ui.LoginPage;
+                import org.demo.ui.CartPage;
+                import org.demo.ui.CheckoutPage;
+                import org.demo.ui.ItemDetailsPage;
                 import org.testng.Assert;
                 import org.testng.annotations.Test;
                 public class GeneratedLoginTest extends org.demo.ui.BaseUiTest {
@@ -42,15 +48,28 @@ public class TestGenerator {
                         ? "Assert.assertTrue(driver.getCurrentUrl().contains(\"inventory\"));"
                         : "Assert.assertTrue(page.isErrorVisible());";
 
+        String username = "";
+        String password = "";
+        Pattern pattern = Pattern.compile("\\((.*?)\\)");
+
+        for (String step : tc.steps) {
+            Matcher matcher = pattern.matcher(step);
+            if (step.contains("userlogin") && matcher.find()) {
+                username = matcher.group(1);
+            } else if (step.contains("password") && matcher.find()) {
+                password = matcher.group(1);
+            }
+        }
+
         return """
                 
                     @Test
                     public void %s() {
                         org.demo.ui.LoginPage page = new org.demo.ui.LoginPage(driver);
                         page.open();
-                        page.login("standard_user", "secret_sauce");
+                        page.login("%s", "%s");
                         %s
                     }
-                """.formatted(methodName, assertion);
+                """.formatted(methodName, username, password, assertion);
     }
 }
