@@ -128,7 +128,7 @@ public class PipelineMain {
     private static void runLinter() {
         System.out.println("=== RUNNING CODE STYLE CHECK ===");
         try {
-            ProcessBuilder processBuilder = new ProcessBuilder("mvn", "validate");
+            ProcessBuilder processBuilder = new ProcessBuilder("mvn", "checkstyle:check");
             processBuilder.redirectErrorStream(true);
             Process process = processBuilder.start();
 
