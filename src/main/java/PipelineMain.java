@@ -60,7 +60,10 @@ public class PipelineMain {
         // STAGE 5.5. LINTING / CODE STYLE CHECK
         runLinter();
 
-        runTests();
+        String testLogs = runTests();
+        FilesUtil.write("generated/test_logs.txt", testLogs);
+
+        generateAllureReport();
 
         // STAGE 6. AI CODE REVIEW
         String generatedTest = FilesUtil.read(
@@ -79,6 +82,22 @@ public class PipelineMain {
         FilesUtil.write("generated/code_review.txt", review);
 
         System.out.println("AI code review saved: generated/code_review.txt");
+
+        // STAGE 7. AI QA SUMMARY
+        String allureSummary = FilesUtil.read("target/site/allure-maven-plugin/widgets/summary.json");
+        String summaryPrompt = FilesUtil.read("prompts/05_qa_summary.txt")
+                .replace("{{LOGS}}", testLogs)
+                .replace("{{REPORT}}", allureSummary);
+        FilesUtil.write("generated/qa_summary_prompt.txt", summaryPrompt);
+
+        String rawQaSummary = MistralClient.call(summaryPrompt);
+        FilesUtil.write("generated/qa_summary_raw.json", rawQaSummary);
+
+        String qaSummary = extractAssistantContent(rawQaSummary);
+        FilesUtil.write("generated/qa_summary.txt", qaSummary);
+
+        System.out.println("QA summary saved: generated/qa_summary.txt");
+
 
         // STAGE. AI BUG REPORT (DESIGN-TIME)
         String checklist = FilesUtil.read("checklist.txt");
@@ -130,10 +149,43 @@ public class PipelineMain {
         }
     }
 
-    private static void runTests() {
+    private static String runTests() {
         System.out.println("=== RUNNING AUTOTESTS ===");
+        StringBuilder logs = new StringBuilder();
         try {
             ProcessBuilder processBuilder = new ProcessBuilder("mvn", "test");
+            processBuilder.redirectErrorStream(true);
+            Process process = processBuilder.start();
+
+            BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+            String line;
+            while ((line = reader.readLine()) != null) {
+                System.out.println(line);
+                logs.append(line).append("\n");
+            }
+
+            int exitCode = process.waitFor();
+            System.out.println("Exited with error code : " + exitCode);
+
+            if (exitCode != 0) {
+                // We don't throw an exception here because we want to analyze the report even if tests fail
+                System.out.println("Autotests failed. See output for details.");
+            }
+            // Truncate logs to avoid exceeding LLM token limit
+            if (logs.length() > 10000) {
+                logs.delete(0, logs.length() - 10000);
+                logs.insert(0, "...\n[TRUNCATED LOGS]\n");
+            }
+            return logs.toString();
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to run tests", e);
+        }
+    }
+
+    private static void generateAllureReport() {
+        System.out.println("=== GENERATING ALLURE REPORT ===");
+        try {
+            ProcessBuilder processBuilder = new ProcessBuilder("mvn", "allure:report");
             processBuilder.redirectErrorStream(true);
             Process process = processBuilder.start();
 
@@ -147,10 +199,10 @@ public class PipelineMain {
             System.out.println("Exited with error code : " + exitCode);
 
             if (exitCode != 0) {
-                throw new RuntimeException("Autotests failed. See output for details.");
+                throw new RuntimeException("Allure report generation failed. See output for details.");
             }
         } catch (Exception e) {
-            throw new RuntimeException("Failed to run tests", e);
+            throw new RuntimeException("Failed to generate Allure report", e);
         }
     }
 
