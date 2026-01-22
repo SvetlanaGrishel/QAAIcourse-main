@@ -1,4 +1,4 @@
-You are a QA analyst.
+You are a Senior QA analyst.
 Analyze the provided test execution logs and the Allure test report summary.
 Based on this information, provide a concise QA summary.
 
